@@ -21,7 +21,7 @@ library("rjson")
 library("shinyBS")
 
 #Appstatus
-mysqlconnection = dbConnect(MySQL(), user = 'raviranjan', password = 'raviranjan123', dbname = 'decision',
+mysqlconnection = dbConnect(MySQL(), user = 'thatirohit', password = 'thatirohit123', dbname = 'decision',
                             host = 'reports-rds.adfdata.net')
 #options("scipen"=100, "digits"=4)
 x= dbSendQuery(mysqlconnection,"select temp.*,round((drp*100)/applications,2) Drop_Percent,round((Esign_Withdrawns*100)/applications,2) Esign_Withdraw_Percent, round((autodecl*100)/applications,2) auto_Decline_Percent, round((OverallPended*100)/applications,2) Pended_Percent,
